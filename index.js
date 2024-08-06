@@ -64,7 +64,7 @@ app.use((req, res , next) => {
 mongoose.connect(DBUrl)
 .then(() => {
     app.listen(3000);
-    console.log('Connected');
+    console.log('Connected Database');
 })
 .catch((err) => {
     console.log(err);
