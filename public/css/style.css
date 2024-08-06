@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container {
+    margin-top: 20px;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-control {
+    width: 550px;
+    border: 1px solid gray;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.input-control {
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+}
+
+.btn {
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.header-container {
+    margin-top: 5px;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgb(85, 147, 208);
+    border-radius: 8px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(239, 239, 239);
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.auth a {
+    text-decoration: none;
+    color: darkolivegreen;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+
+/* .page-content {
+    background-color: lightgray;
+    border-radius: 10px;
+} */
+
+.dash-content {
+    margin: 20px 0  ;
+    background-color: rgb(74, 68, 68);
+    border-radius: 8px;
+}
+
+.item {
+    margin: 20px 0;
+    background-color: rgb(18, 18, 18);
+    border-radius: 8px;
+    width: 900px;
+    height: 70px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.btn-container {
+    display: flex; 
+}
+
+.btn-container a {
+    margin-right: 5px;
+}
+
+.btn-container form button {
+    background-color: rgb(255, 39, 39);
+    border-color: rgb(255, 39, 39);
+    color: #e2e2e2;
+}
+
+.home {
+    margin-top: 10px;
+}
+
+
+.music-title {
+    background-color: rgb(74, 68, 68);
+    padding: 10px 30px;
+    border-radius: 8px;
+    color: #ded6d6;
+}
+
+.music {
+    margin-top: 50px;
+    width: 400px;
+}
+
+
+.add-comment {
+    width: 400px;
+    height: 180px;
+    margin-top: 50px;
+    background-color: rgb(55, 51, 51);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+    
+}
+
+.add-comment label {
+    margin: 8px 5px;
+    color: #f3eded;
+}
+
+.add-comment textarea {
+    margin: 0 auto;
+    width: 350px;
+    border-radius: 5px;
+    background-color: rgb(74, 70, 70);
+    color: #fff;
+    font-size: 15px;
+}
+
+.add-comment button {
+    width: 60px;
+    height: 30px;
+    margin: 8px 5px;
+    background-color: #7e7878;
+    border: none;
+    border-radius: 5px;
+}
+
+.comment-container {
+    margin-top: 10px;
+    width: 400px;
+    background-color: rgb(55, 51, 51);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.comment {
+    width: 80%;
+    padding: 5px;
+    margin: 10px auto;
+    background-color: #7e7878;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-text {
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.delete-comment {
+    font-size: 25px;    
+}
+
+.delete-comment a {
+    text-decoration: none;
+    color: black;
+}
+
+.notfind {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    font-size: 40px;
+}

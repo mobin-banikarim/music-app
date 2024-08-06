@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include('./includes/header.ejs') %>
+
+    <div class="body">
+        <div class="container">
+            <div>
+                <h1 class="title">Upload Music</h1>
+            </div>
+            <form class="form-control" enctype="multipart/form-data" action="/admin/upload-music" method="post">
+                <div class="form-container">
+                    <label class="input-label" for="title">Title</label>
+                    <input class="input-control" name="title" id="title" type="text">
+                </div>
+                <div class="form-container">
+                    <label class="input-label" for="file">Upload File</label>
+                    <input class="input-control" name="music" type="file" id="file">
+                </div>
+                <button class="btn">Add To Site</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

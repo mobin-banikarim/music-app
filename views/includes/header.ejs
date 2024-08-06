@@ -1,0 +1,30 @@
+
+<header class="header">
+    <div class="header-container">
+
+        <% if (isLogin) { %>
+            <div class="menu">
+                <a href="/">Home</a>
+                <a href="/admin/upload-music">Add Music</a>
+                <a href="/admin/dashboard">Dashboard</a>
+            </div>
+        <% } else { %>
+            <div class="menu">
+                <a href="/">Home</a>
+            </div>
+        <% } %>
+        
+        
+
+        <% if (isLogin) { %>
+            <div class="auth">
+                <a href="/logout">LogOut</a>
+            </div>
+        <% } else { %>
+            <div class="auth">
+                <a href="/singup">SingUp</a>
+                <a href="/login">LogIn</a>
+            </div>
+        <% } %>
+    </div>
+</header>

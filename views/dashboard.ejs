@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include('./includes/header.ejs') %>
+
+    <div class="body">
+        <div class="container dash-content">
+            
+            <% musicList.forEach(music => { %>
+                <div class="item">
+                    <h3> <%= music.title %> </h3>
+
+                    <div class="btn-container">
+                        <a href="/view/<%= music._id %>">
+                            <button class="btn">View</button>
+                        </a>
+                        <form action="/admin/delete" method="post">
+                            <input type="hidden" name="musicId" value="<%= music._id %>">
+                            <button class="btn">delete</button>
+                        </form>
+                    </div>
+                </div>
+            <% }) %>
+
+            
+        </div>
+    </div>
+</body>
+</html>

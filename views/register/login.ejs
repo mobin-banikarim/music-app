@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/register.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <%- include('./../includes/header.ejs') %>
+
+    <div class="body">
+        <div class="container">
+            <form class="form-control" action="/login" method="post">
+
+                <div class="error-list">
+                    <% if (!errors) { %>
+                        <div></div>
+                    <% } else { %>
+                        <% errors.forEach(error => { %>
+                            <div class="error-item"><%= error.msg %></div>
+                        <% }) %>
+                    <% } %>
+                </div>
+
+                <div class="form-container">
+                    <label for="name">Name</label>
+                    <input name="name" class="input-control" id="name" type="text">
+                </div>
+    
+                <div class="form-container">
+                    <label for="password">Password</label>
+                    <input name="password" class="input-control" id="password" type="text">
+                </div>
+    
+                <button class="btn">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

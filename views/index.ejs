@@ -1,0 +1,84 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/public/css/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+
+    <%- include('./includes/header.ejs') %>
+    
+    <div class="body">
+        <div class="container dash-content">
+
+            <h2 class="home">Home</h2>
+            
+            <div id="music-container">
+                <% musicList.forEach(music => { %>
+                    <div class="item">
+                        <h3> <%= music.title %> </h3>
+    
+                        <div class="btn-container">
+                            <a href="/view/<%= music._id %>">
+                                <button class="btn">View</button>
+                            </a>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+
+                <!-- <button class="load-more">Load More...</button> -->
+        </div>
+    </div>
+
+    <script>
+        let page = 1;
+        const limit = 7;
+        const container = document.getElementById('music-container');
+        const loadMore = document.querySelector('.load-more');
+
+        async function loadMusics() {
+            const res = await fetch(`/page?page=${page}&limit=${limit}`);
+            const musics = await res.json();
+
+            musics.forEach(music => {
+                const div = document.createElement('div');
+                div.className = 'music-item';
+                div.innerHTML = `
+                    <div class="item">
+                        <h3> ${music.title} </h3>
+    
+                        <div class="btn-container">
+                            <a href="/view/${music._id}">
+                                <button class="btn">View</button>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+            page++;
+        }
+
+        window.addEventListener('scroll', () => {
+
+            
+
+            setTimeout(() => {
+                const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+                if (scrollTop + clientHeight >= scrollHeight - 5) {
+                    loadMusics();
+                }
+            } , 1000)
+
+            // if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
+                
+            // }
+        });
+
+    </script>
+
+</body>
+</html>
